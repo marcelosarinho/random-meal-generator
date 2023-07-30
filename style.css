@@ -1,0 +1,35 @@
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h3, h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+}
+
+.new-meal-button {
+  background-color: orange;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.new-meal-button:hover {
+  background-color: rgb(228, 148, 0);
+  cursor: pointer;
+}
