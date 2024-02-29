@@ -24,13 +24,17 @@ const createMeal = (meal) => {
   }
 
   mealDiv.innerHTML = `<div class="left">
-  <img src="${meal.strMealThumb}" alt="Imagem da refeição" />
+  <div class="img-div">
+    <img src="${meal.strMealThumb}" alt="Imagem da refeição" />
+  </div>
 
-  <p><strong>Área:</strong> ${meal.strArea ?? "None"}</p>
-  <p><strong>Categoria:</strong> ${meal.strCategory ?? "None"}</p>
-  <p><strong>Tags:</strong> ${
-    meal.strTags ? meal.strTags.split(",").join(", ") : "None"
-  }</p>
+  <div class="area-div">
+    <p><strong>Area:</strong> ${meal.strArea ?? "None"}</p>
+    <p><strong>Category:</strong> ${meal.strCategory ?? "None"}</p>
+    <p><strong>Tags:</strong> ${
+      meal.strTags ? meal.strTags.split(",").join(", ") : "None"
+    }</p>
+  </div>
 
   <div class="ingredients">
     <h3>Ingredients</h3>
@@ -52,8 +56,12 @@ const createMeal = (meal) => {
 
 <footer>
   <h4>Video</h4>
-  <iframe height="300" width="600" src="https://www.youtube.com/embed/${meal.strYoutube.slice(-11)}">Video</iframe>
-  <h4>Source: </h4><a href="">${meal.strSource ?? "None"}</a>
+  <iframe height="500" src="https://www.youtube.com/embed/${meal.strYoutube.slice(
+    -11
+  )}">Video</iframe>
+  <h4>Source: </h4><a href="${meal.strSource ?? "#"}">${
+    meal.strSource ?? ""
+  }</a>
 </footer>
 `;
 };

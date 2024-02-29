@@ -1,5 +1,16 @@
+:root {
+  --orange: #ffa500;
+  --dark-orange: #e49400;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
-  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  height: auto;
   display: grid;
   place-items: center;
   padding: 0;
@@ -15,18 +26,18 @@ h3,
 h6 {
   margin-top: 0;
   margin-bottom: 0;
+  text-align: center;
 }
 
 img {
-  width: auto;
-  height: 24rem;
+  width: 100%;
   border-radius: 6px;
 }
 
 footer {
-  width: 100%;
+  width: 80%;
+  margin: 3.2rem auto;
   text-align: center;
-  padding: 2rem 0;
 }
 
 footer > h4 {
@@ -35,26 +46,33 @@ footer > h4 {
 
 iframe {
   display: block;
-  margin: 2rem auto;
+  margin: 3.2rem auto;
   border: none;
+  width: 100%;
+}
+
+ul {
+  padding: 0 1.5rem;
 }
 
 .title {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 3.2rem;
+  margin-bottom: 3.2rem;
+  margin-top: 3.2rem;
 }
 
 .subtitle {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1.6rem;
 }
 
 .new-meal-button {
   background-color: orange;
-  padding: 1rem;
+  padding: 1.6rem;
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 1.6rem;
+  transition: background-color 0.25s;
 }
 
 .new-meal-button:hover {
@@ -66,9 +84,9 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   align-items: start;
-  column-gap: 2rem;
+  column-gap: 3.2rem;
   width: 80%;
-  margin: 3rem auto;
+  margin: 4.8rem auto;
 }
 
 .meal-title {
@@ -80,5 +98,70 @@ iframe {
 }
 
 .right {
+  flex: 1;
   width: 55%;
+}
+
+.right p {
+  text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+  .area-div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .meal {
+    flex-direction: column;
+  }
+
+  .meal-title {
+    margin: 2rem 0;
+  }
+
+  .left {
+    width: auto;
+  }
+
+  h3 {
+    text-align: left;
+    margin: 2rem 0;
+  }
+
+  .right {
+    width: auto;
+  }
+
+  h2 {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.6rem;
+  }
+
+  iframe {
+    height: 25rem;
+  }
+
+  a {
+    word-wrap: break-word;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .subtitle {
+    word-wrap: break-word;
+  }
+
+  iframe {
+    height: 22rem;
+  }
 }
