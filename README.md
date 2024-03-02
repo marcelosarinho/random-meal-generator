@@ -11,6 +11,8 @@
 
 ## Geral
 
+OBS: o idioma das receitas está em inglês.
+
 Esse projeto é um site que gera receitas, onde o usuário pode:
 - Visualizar a receita
 - Visualizar os ingredientes necessários
